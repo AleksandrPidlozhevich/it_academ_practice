@@ -56,5 +56,13 @@ namespace ConsoleApp1
             }
             Console.WriteLine($"Макс. знач: {arr3buffer}");
         }
+        static void boxingunboxing()
+        {
+            short keyShort = 426;
+            Int16 netShort = -426;
+            Console.WriteLine($"Тип{keyShort.GetType()}");
+            Console.WriteLine($"Тип {netShort.GetType()}");
+            Console.WriteLine();
+        }
     }
 }
