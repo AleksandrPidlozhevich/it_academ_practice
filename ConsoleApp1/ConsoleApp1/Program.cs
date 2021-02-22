@@ -58,11 +58,11 @@ namespace ConsoleApp1
         }
         static void boxingunboxing()
         {
-            short keyShort = 426;
-            Int16 netShort = -426;
-            Console.WriteLine($"Тип{keyShort.GetType()}");
-            Console.WriteLine($"Тип {netShort.GetType()}");
-            Console.WriteLine();
+            short i1 = 426;
+            object i2 = i1;
+            sbyte i21 = (sbyte)i2;
+            Console.WriteLine(i2);
+
         }
     }
 }
