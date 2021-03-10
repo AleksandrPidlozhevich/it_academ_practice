@@ -2,23 +2,69 @@
 
 namespace Lecture_10
 {
-    class Motorcycle
+    internal class Motorcycle : Engine
     {
-        public string Model { get; set; }
+        private int identifier { get; set; }
+        private string model { get; set; }
+        private string manufacturer { get; set; }
+        private int year { get; set; }
+        private float mileage { get; set; }
 
-        public string Manufacturer { get; set; }
-
-        public int Year { get; set; }
-
-        public int Identifier { get; set; }
-        public int Ident()
+        public int Identifier
         {
-            var guid = Guid.NewGuid().ToString();
+            get
+            {
+                return identifier;
+            }
+            private set
+            {
+                Guid identifier = Guid.NewGuid();
+            }
         }
-
-        public string ToString()
+        public string Model
         {
-            return $" {Manufacturer} {Model} {Year} ";
+            get
+            {
+                return model;
+            }
+            set
+            {
+                if (value != null) model = value;
+            }
+        }
+        public string Manufacturer
+        {
+            get
+            {
+                return manufacturer;
+            }
+            set
+            {
+                if (value != null) manufacturer = value;
+            }
+        }
+        public int Year
+        {
+            get
+            {
+                return year;
+            }
+            set
+            {
+                DateTime time = new DateTime();
+                year = value == time.Year ? value : time.Year;
+            }
+        }
+        public float Mileage
+        {
+            get
+            {
+                return mileage;
+            }
+            set
+            {
+                mileage = value;
+            }
         }
     }
 }

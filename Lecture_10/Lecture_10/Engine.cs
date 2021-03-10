@@ -1,23 +1,36 @@
-﻿using Lecture_10;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
-namespace Lecture_12
+namespace Lecture_10
 {
-    class Engine : Motorcycle
+    internal class Engine
     {
-        public int PowerMotorcycle(int side)
+        int power;
+        int volume;
+        public int Power
         {
-            Random rnd = new Random();
-            int power = rnd.Next(50, 30);
-            return power;
+            get
+            {
+                return power;
+            }
+            set
+            {
+                Random rnd = new Random();
+                value = rnd.Next(50, 300);
+                power = value;
+            }
         }
-        public double VolumeMotorcycle(int radius)
+        public int Volume
         {
-            Random rnd = new Random();
-            int volume = rnd.Next(125, 3200);
-            return volume;
+            get
+            {
+                return volume;
+            }
+            set
+            {
+                Random rnd = new Random();
+                value = rnd.Next(125, 3200);
+                volume = value;
+            }
         }
     }
 }
