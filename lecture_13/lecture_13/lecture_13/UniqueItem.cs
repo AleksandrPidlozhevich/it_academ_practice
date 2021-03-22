@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace lecture_13
 {
-    public class UniqueItem
+    class UniqueItem
     {
         public int _id;
         public static int Id { get; set; }
         public UniqueItem()
         {
             _id = Id;
-            Id += 1;
+            Id ++;
         }
     }
 }
